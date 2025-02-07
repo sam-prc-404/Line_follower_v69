@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <math.h>
 #include "Line_follower_funcs.h"
-
-RM = 15;
-VT = 100;
+float RM = 15;
+int VT = 100;
 
 // bots velocities and omega
-botV = {0.0, 50.0, 0.0, 0.0};
+struct DiffV botV = {0.0, 50.0, 0.0, 0.0};
 
 // calculate differential VR and VL for left and right wheels
 struct DiffV calculate_diffVelocities(struct DiffV resV)
